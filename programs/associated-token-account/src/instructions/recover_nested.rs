@@ -47,6 +47,13 @@ impl RecoverNested<'_> {
         self.invoke_signed(&[])
     }
 
+    /// Invokes the recover nested instruction with the provided signers
+    ///
+    /// # Errors
+    /// This function will return an error if:
+    /// - The instruction data is invalid
+    /// - The signers are insufficient
+    /// - The program execution fails
     pub fn invoke_signed(&self, signers: &[Signer]) -> ProgramResult {
         // account metadata
         let account_metas: [AccountMeta; 7] = [

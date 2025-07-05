@@ -39,3 +39,9 @@ test = "1.84.1"
 pre-release-commit-message = "Publish {{crate_name}} v{{version}}"
 tag-message = "Publish {{crate_name}} v{{version}}"
 consolidate-commits = false
+
+[workspace.lints.clippy]
+undocumented_unsafe_blocks = "warn"
+multiple_unsafe_ops_per_block = "warn"
+pedantic = "warn"
+
